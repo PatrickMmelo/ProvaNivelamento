@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    container_name: prova_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: provadb
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - prova_data:/var/lib/postgresql/data
+volumes:
+  prova_data:
